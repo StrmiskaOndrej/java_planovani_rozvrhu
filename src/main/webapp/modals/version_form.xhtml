@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+    <h:outputStylesheet library="css" name="style.css" />
+</h:head>
+<h:body>
+
+    <p:dialog header="Version" widgetVar="version_dialog" resizable="false" modal="true" showEffect="puff" hideEffect="puff" width="500">
+        
+        <h:form id="schedule_version_form">
+            <p:growl id="growl" sticky="true" showDetail="true" life="3000" />
+            
+            <p:multiSelectListbox style="max-height: 200px; overflow:scroll" value="#{SchedulePlannerBean.semesterListboxSelection}" id="schedule_version_select" effect="slide" header="Semester" showHeaders="true" required="true" requiredMessage="Semester required" styleClass="version_form">
+                <f:selectItems value="#{SchedulePlannerBean.semesterListbox}" />
+            </p:multiSelectListbox>
+
+            <p:commandButton value="Select version" icon="ui-icon-check" update=":header:current_semester growl" actionListener="#{SchedulePlannerBean.selectSemesterVersion}" oncomplete="handleLoginRequest(xhr, status, args)" />
+
+            <p:separator/>
+
+            <h:panelGrid columns="2" cellpadding="5">
+
+                <p:commandButton value="Create version" icon="ui-icon-plusthick" onclick="PF('version_dialog').hide(); PF('version_wizard').show()" />
+
+                <p:commandButton value="Create semester" icon="ui-icon-plusthick" onclick="PF('version_dialog').hide(); PF('semester_wizard').show()" />
+
+            </h:panelGrid>
+        </h:form>
+
+        <script type="text/javascript">
+            function handleLoginRequest(xhr, status, args) {
+                if(args.validationFailed || !args.selectScheduleVersionSuccess) {
+                    PF('version_dialog').jq.effect("shake", {times:5}, 100);
+                }
+                else {
+                    PF('version_dialog').hide();
+                }
+            }
+        </script>
+    </p:dialog>
+</h:body>
+</html>

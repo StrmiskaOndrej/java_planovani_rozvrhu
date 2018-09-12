@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+</h:head>
+<h:body>
+
+    <p:dialog header="Export" widgetVar="export_dialog">
+        <p:accordionPanel>
+            <p:tab title="Export schedule in CSV">
+                <h:form enctype="multipart/form-data" style="width:500px">
+
+                    <!-- download csv file -->                    
+                    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                        <p:outputLabel for="requirementCategory" value="Export for: " />
+                        <p:selectOneRadio id="requirementCategory" value="#{exportsBean.requirementCategory}"
+                                          required="true"  requiredMessage="Category required">
+                            <f:selectItem itemLabel="Lectures" itemValue="lect" />
+                            <f:selectItem itemLabel="Exams" itemValue="exam" />
+                        </p:selectOneRadio>                       
+                    </h:panelGrid>
+                    <h:commandButton action="#{exportsBean.exportCSV}" value="Export CSV." />
+                    
+
+                    <p:growl id="messages" showDetail="true" />                                        
+                </h:form>
+                <hr />                
+            </p:tab>
+        
+            <p:tab title="Export terms in HTML">
+                <h:form enctype="multipart/form-data" style="width:500px">
+
+                    <!-- download csv file -->                    
+                    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                        <p:outputLabel for="studyProgram" value="Study program: " />
+                        <p:selectOneRadio id="studyProgram" value="#{exportsBean.studyProgram}"
+                                          required="true"  requiredMessage="Study program required">
+                            <f:selectItem itemLabel="1BIT" itemValue="1BIT" />
+                            <f:selectItem itemLabel="2BIT" itemValue="2BIT" />
+                            <f:selectItem itemLabel="3BIT" itemValue="3BIT" />
+                            <f:selectItem itemLabel="1MIT" itemValue="1MIT" />
+                            <f:selectItem itemLabel="2MIT" itemValue="2MIT" />
+                        </p:selectOneRadio>
+                        <p:outputLabel for="requirementCategory" value="Export for: " />
+                        <p:selectOneRadio id="requirementCategory" value="#{exportsBean.requirementCategory}"
+                                          required="true"  requiredMessage="Category required">
+                            <f:selectItem itemLabel="Lectures" itemValue="lect" />
+                            <f:selectItem itemLabel="Exams" itemValue="exam" />
+                        </p:selectOneRadio>
+                      
+                    </h:panelGrid>
+                    <h:commandButton action="#{exportsBean.exportHTML()}" value="Export HTML." />
+                    
+
+                    <p:growl id="messages" showDetail="true" />                                        
+                </h:form>
+                
+                <hr />
+            </p:tab>
+            
+            <p:tab title="Export terms in CSV">
+                <h:form enctype="multipart/form-data" style="width:500px">
+
+                    <!-- download csv file -->                    
+                    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">                        
+                        <p:outputLabel for="requirementCategory" value="Export for: " />
+                        <p:selectOneRadio id="requirementCategory" value="#{exportsBean.requirementCategory}"
+                                          required="true"  requiredMessage="Category required">
+                            <f:selectItem itemLabel="Lectures" itemValue="lect" />
+                            <f:selectItem itemLabel="Exams" itemValue="exam" />
+                        </p:selectOneRadio>
+                        
+                    </h:panelGrid>
+                    <h:commandButton action="#{exportsBean.exportCSVTerms()}" value="Export CSV." />
+                    
+
+                    <p:growl id="messages" showDetail="true" />                                        
+                </h:form>
+                
+                <hr />
+            </p:tab>
+        </p:accordionPanel>
+        <h:form>
+            <p:commandButton action="#{MovesBean.moveToIndex}" value="Button to index."/>
+            <p:menuitem value="Export" action="#{MovesBean.moveToExportPage}" />
+        </h:form>
+     
+    </p:dialog>
+</h:body>
+</html>  

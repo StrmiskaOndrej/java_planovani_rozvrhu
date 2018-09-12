@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+
+<body>
+
+<ui:composition>
+
+    <h:form id="form">
+        <p:growl id="msgs" showDetail="true"/>
+
+        <p:separator style="height: 20px; border: 0; background: none;" />
+
+        <ui:repeat value="#{ExamPlannerBean.days}" var="days">
+            <p:dataTable id="rooms" var="rooms" value="#{days.mistnost}" editable="true" editMode="cell">
+                <p:columnGroup type="header">
+                    <p:row>
+                        <p:column headerText="#{days.nazevDatum}" rowspan="2" style="width: 100px;" />
+                        <p:column headerText="7:00" />
+                        <p:column headerText="8:00" />
+                        <p:column headerText="9:00" />
+                        <p:column headerText="10:00" />
+                        <p:column headerText="11:00" />
+                        <p:column headerText="12:00" />
+                        <p:column headerText="13:00" />
+                        <p:column headerText="14:00" />
+                        <p:column headerText="15:00" />
+                        <p:column headerText="16:00" />
+                        <p:column headerText="17:00" />
+                        <p:column headerText="18:00" />
+                        <p:column headerText="19:00" />
+                        <p:column headerText="20:00" />
+                    </p:row>
+                    <p:row>
+
+                        <p:column headerText="7:50" />
+                        <p:column headerText="8:50" />
+                        <p:column headerText="9:50" />
+                        <p:column headerText="10:50" />
+                        <p:column headerText="11:50" />
+                        <p:column headerText="12:50" />
+                        <p:column headerText="13:50" />
+                        <p:column headerText="14:50" />
+                        <p:column headerText="15:50" />
+                        <p:column headerText="16:50" />
+                        <p:column headerText="17:50" />
+                        <p:column headerText="18:50" />
+                        <p:column headerText="19:50" />
+                        <p:column headerText="20:50" />
+                    </p:row>
+                </p:columnGroup>
+
+                <p:column>
+                    <h:outputText value="#{rooms.mistnostNazev}" />
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(0).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(0).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(1).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(1).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(2).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(2).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(3).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(3).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(4).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(4).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(5).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(5).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(6).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(6).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(7).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(7).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(8).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(8).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(9).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(9).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(10).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(10).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(11).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(11).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(12).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(12).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+                <p:column>
+                    <p:cellEditor>
+                        <f:facet name="output"><h:outputText value="#{rooms.predmet.get(13).predmetZkratka}" /></f:facet>
+                        <f:facet name="input"><p:inputText value="#{rooms.predmet.get(13).predmetZkratka}" style="width:96%"/></f:facet>
+                    </p:cellEditor>
+                </p:column>
+
+            </p:dataTable>
+
+            <p:separator style="margin-top: 20px; margin-bottom: 20px;" />
+
+        </ui:repeat>
+
+
+    </h:form>
+
+</ui:composition>
+</body>
+</html>

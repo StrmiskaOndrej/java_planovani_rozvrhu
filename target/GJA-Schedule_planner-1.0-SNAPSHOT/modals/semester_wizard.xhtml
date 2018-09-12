@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet library="css" name="style.css" />
+</h:head>
+<h:body>
+
+    <p:dialog header="Create new semester" widgetVar="semester_wizard" resizable="false" modal="true" showEffect="puff" hideEffect="puff">
+
+        <h:form>
+            <p:growl id="growl" sticky="true" showDetail="true" life="3000" />
+            
+            <h:panelGrid columns="2" cellpadding="5">
+                <h:outputLabel value="Type: " for="type_menu" />
+                <p:selectOneMenu id="type_menu" value="#{SchedulePlannerBean.semesterType}">
+                    <f:selectItem itemLabel="ZS" itemValue="ZS" />
+                    <f:selectItem itemLabel="LS" itemValue="LS" />
+                </p:selectOneMenu>
+
+                <h:outputLabel value="Academic year: " for="year" />
+                <p:inputMask id="academic_year" label="Academic year" value="#{SchedulePlannerBean.semesterAdacemicYear}" required="true" mask="9999/9999"/>
+                
+                <h:outputLabel value="Year: " for="year" />
+                <p:inputMask id="year" label="Year" value="#{SchedulePlannerBean.semesterYear}" required="true" mask="9999"/>
+                
+                <h:outputLabel value="Exams from: " for="exams_from" />
+                <p:inputMask id="exams_from" value="#{SchedulePlannerBean.semesterExamsFrom}" mask="9999-99-99"/>
+                
+                <h:outputLabel value="Exams to: " for="exams_to" />
+                <p:inputMask id="exams_to" value="#{SchedulePlannerBean.semesterExamsTo}" mask="9999-99-99"/>
+                
+            </h:panelGrid>
+
+            <p:commandButton value="Create semester" icon="ui-icon-check" update="growl" actionListener="#{SchedulePlannerBean.addSemester}" oncomplete="handleLoginRequest(xhr, status, args)" />
+        </h:form>
+        
+        <script type="text/javascript">
+            function handleLoginRequest(xhr, status, args) {
+                if(args.validationFailed || !args.addSemesterSuccess) {
+                    PF('semester_wizard').jq.effect("shake", {times:5}, 100);
+                }
+                else {
+                    PF('semester_wizard').hide();
+                }
+            }
+        </script>
+    </p:dialog>
+</h:body>
+</html>

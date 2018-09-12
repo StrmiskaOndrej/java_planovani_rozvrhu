@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+
+    <body>
+        <ui:composition>
+            <h:form id="header">
+                <p:menubar id="toolbar">
+                    <p:submenu label="Navigation">
+                        <p:menuitem value="Lectures planner" action="#{MovesBean.moveToLecturesPage}" ajax="false" />
+                        <p:menuitem value="Exams planner" action="#{MovesBean.moveToExamsPage}" ajax="false" />
+                    </p:submenu>
+
+                    <p:submenu label="Edit">
+                        <p:menuitem value="Undo" />
+                        <p:menuitem value="Redo" />
+                    </p:submenu>
+
+                    <p:submenu label="View">
+                        <p:menuitem value="Days" url="?days" />
+                        <p:menuitem value="Rooms" url="?rooms" />
+                        <p:menuitem value="Courses" url="?courses" />
+                        <p:menuitem value="Teachers" url="?teachers" />
+                    </p:submenu>
+
+                    <p:submenu label="Tools">
+                        <p:menuitem value="Export" onclick="PF('export_dialog').show();" />
+                        <p:menuitem value="Import" onclick="PF('import_dialog').show();" />
+                    </p:submenu>
+
+                    <f:facet name="options">
+
+                        <p:commandButton type="button" id="current_semester" value="Version: #{SchedulePlannerBean.semesterListboxSelection}" onclick="PF('version_dialog').show();" />
+
+                        <p:commandButton type="button" value="Login" onclick="PF('dlg').show();" />
+                    </f:facet>
+                </p:menubar>
+
+                <p:sticky target="toolbar" />
+            </h:form>
+        </ui:composition>
+    </body>
+</html>

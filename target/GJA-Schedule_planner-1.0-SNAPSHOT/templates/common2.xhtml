@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html   xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="style.css" />
+    </h:head>
+    <h:body>
+            <ui:insert name="header" >
+                <ui:include src="/templates/header.xhtml" />
+            </ui:insert>
+        <p:panelGrid style="margin-top:20px">
+                <p:row>
+                    <p:column>
+                        <ui:insert name="content" >
+                            <ui:include src="/templates/content2.xhtml">
+                                <ui:param name="pageContent" value="#{pageContent}" />
+                            </ui:include>
+                        </ui:insert>
+                    </p:column>
+                    <p:column>Conf. Finaasls</p:column>
+                    <p:column>NBA Finals</p:column>
+                    <p:column>Champion</p:column>
+                </p:row>
+        </p:panelGrid>
+    
+            
+            <ui:insert name="footer" >
+                <ui:include src="/templates/footer.xhtml" />
+            </ui:insert>
+
+            <ui:insert name="login_form" >
+                <ui:include src="/modals/login_form.xhtml" />
+            </ui:insert>
+
+            <ui:insert name="export_form" >
+                <ui:include src="/modals/export_form.xhtml" />
+            </ui:insert>
+
+            <ui:insert name="import_form" >
+                <ui:include src="/modals/import_form.xhtml" />
+            </ui:insert>
+
+            <ui:insert name="version_form" >
+                <ui:include src="/modals/version_form.xhtml" />
+            </ui:insert>
+
+            <ui:insert name="version_wizard" >
+                <ui:include src="/modals/version_wizard.xhtml" />
+            </ui:insert>
+
+            <ui:insert name="semester_wizard" >
+                <ui:include src="/modals/semester_wizard.xhtml" />
+            </ui:insert>
+    </h:body>
+</html>

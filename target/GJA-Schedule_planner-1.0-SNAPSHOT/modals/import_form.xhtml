@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+</h:head>
+<h:body>
+
+    <p:dialog header="Import" widgetVar="import_dialog">
+        <p:accordionPanel >
+            <p:tab title="Import JSON with study programs">
+                <p>For creating json file with study programs and courses use python script inputs.py ("python3 inputs.py -w -o output.json")</p>
+                <h:form enctype="multipart/form-data" style="width:500px">
+
+                    <!-- upload json or csv file -->
+                    <p:fileUpload value="#{importsBean.file}" mode="simple" skinSimple="true" />
+
+                    <p:commandButton value="Import" ajax="false"
+                                     actionListener="#{importsBean.uploadJSON}"/>
+
+                    <p:growl id="messages" showDetail="true" />
+                </h:form>
+                <hr />
+            </p:tab>
+            <p:tab title="Import HTML with requirements">
+                <h:form enctype="multipart/form-data" style="width:500px">
+
+                    <!-- upload html file -->
+                    <p:fileUpload value="#{importsBean.file}" mode="simple" skinSimple="true" />
+                    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                        <p:outputLabel for="requirementCategory" value="Requirement for: " />
+                        <p:selectOneRadio id="requirementCategory" value="#{importsBean.requirementCategory}"
+                                          required="true"  requiredMessage="Category required">
+                            <f:selectItem itemLabel="Lectures" itemValue="lect" />
+                            <f:selectItem itemLabel="Exams" itemValue="exam" />
+                        </p:selectOneRadio>
+                        <p:outputLabel for="semester" value="Semester: " />
+                        <p:selectOneRadio id="semester" value="#{importsBean.csvSemester}"
+                                          required="true"  requiredMessage="Semester required">
+                            <f:selectItem itemLabel="Winter" itemValue="ZS" />
+                            <f:selectItem itemLabel="Summer" itemValue="LS" />                    
+                        </p:selectOneRadio>            
+                        <p:outputLabel for="year" value="Year: " />
+                        <p:inputText id="year" value="#{importsBean.csvYear}"
+                                     required="true" requiredMessage="Year required" 
+                                     maxlength="4" 
+                                     converterMessage="Please enter digits only." 
+                                     />                           
+                    </h:panelGrid>
+                    <p>(For academic year 2017/18: <br />
+                            &nbsp;year of winter semester must be 2017<br/>
+                            &nbsp;year of summer semester must be 2018)
+                        </p>
+                    <p:commandButton value="Import" ajax="false"
+                                     actionListener="#{importsBean.uploadReq}"/>
+
+                    <p:growl id="messages" showDetail="true" />
+                </h:form>
+                <hr />
+            </p:tab>
+            <p:tab title="Import CSV with schedule">
+                <p>CSV file with schedule for lectures could be downloaded from <br/>
+                    <a href="http://www.fit.vutbr.cz/study/advisor/20162017/priprava_LS/planovani/">
+                        http://www.fit.vutbr.cz/study/advisor/20162017/priprava_LS/planovani/</a> <br/>
+                    where "20162017" could be replaced with "20172018" (or other years) <br/> 
+                    and "priprava_LS" could be replaced with "priprava_ZS"</p>
+                <p>CSV file with schedule for exams could be downloaded from <br/>
+                    <a href="http://www.fit.vutbr.cz/study/advisor/20162017/zkouskyLS/planovani_mistnosti/">
+                        http://www.fit.vutbr.cz/study/advisor/20162017/zkouskyLS/planovani_mistnosti/</a> <br/>
+                    where "20162017" could be replaced with "20172018" (or other years) <br/> 
+                    and "zkouskyLS" could be replaced with "zkouskyZS"</p>
+                <h:form enctype="multipart/form-data" style="width:500px">
+
+                    <!-- upload csv file -->
+                    <p:fileUpload value="#{importsBean.file}" mode="simple" skinSimple="true" />
+                    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                        <p:outputLabel for="requirementCategory" value="Schedule for: " />
+                        <p:selectOneRadio id="requirementCategory" value="#{importsBean.requirementCategory}"
+                                          required="true"  requiredMessage="Category required">
+                            <f:selectItem itemLabel="Lectures" itemValue="lect" />
+                            <f:selectItem itemLabel="Exams" itemValue="exam" />
+                        </p:selectOneRadio>
+                        <p:outputLabel for="semester" value="Semester: " />
+                        <p:selectOneRadio id="semester" value="#{importsBean.csvSemester}"
+                                          required="true"  requiredMessage="Semester required">
+                            <f:selectItem itemLabel="Winter" itemValue="ZS" />
+                            <f:selectItem itemLabel="Summer" itemValue="LS" />                    
+                        </p:selectOneRadio>                
+                        <p:outputLabel for="year" value="Year: " />
+                        <p:inputText id="year" value="#{importsBean.csvYear}"
+                                     required="true" requiredMessage="Year required" 
+                                     maxlength="4" 
+                                     converterMessage="Please enter digits only." 
+                                     />                               
+                    </h:panelGrid>
+                    <p>(For academic year 2017/18: <br />
+                            &nbsp;year of winter semester must be 2017<br/>
+                            &nbsp;year of summer semester must be 2018)
+                        </p>
+                    <p:commandButton value="Import" ajax="false"
+                                     actionListener="#{importsBean.uploadCSV}"/>
+
+                    <p:growl id="messaegs" showDetail="true" />
+                </h:form>
+                <hr />
+            </p:tab>
+            <p:tab title="Import HTML with students's collisions">
+                <h:form enctype="multipart/form-data" style="width:500px">
+
+                    <!-- upload html file -->
+                    <p:fileUpload value="#{importsBean.file}" mode="simple" skinSimple="true" />
+                    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                        
+                        <p:outputLabel for="semester" value="Semester: " />
+                        <p:selectOneRadio id="semester" value="#{importsBean.csvSemester}"
+                                          required="true"  requiredMessage="Semester required">
+                            <f:selectItem itemLabel="Winter" itemValue="ZS" />
+                            <f:selectItem itemLabel="Summer" itemValue="LS" />                    
+                        </p:selectOneRadio>            
+                        <p:outputLabel for="year" value="Year: " />
+                        <p:inputText id="year" value="#{importsBean.csvYear}"
+                                     required="true" requiredMessage="Year required" 
+                                     maxlength="4" 
+                                     converterMessage="Please enter digits only." 
+                                     />   
+                    </h:panelGrid>
+                    <p>(For academic year 2017/18: <br />
+                            &nbsp;year of winter semester must be 2017<br/>
+                            &nbsp;year of summer semester must be 2018)
+                        </p>
+                    <p:commandButton value="Import" ajax="false"
+                                     actionListener="#{importsBean.uploadCollisions}"/>
+
+                    <p:growl id="messages" showDetail="true" />
+                </h:form>
+                <hr />
+            </p:tab>
+        </p:accordionPanel>
+        <h:form>
+            <p:commandButton action="#{MovesBean.moveToIndex}" value="Button to index."/>
+        </h:form>
+        
+    </p:dialog>
+</h:body>
+</html>  

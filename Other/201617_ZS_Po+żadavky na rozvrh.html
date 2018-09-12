@@ -1,0 +1,2375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>IS FIT - Požadavky na rozvrh</title>
+<link rel="stylesheet" type="text/css" href="IS%20FIT%20-%20Po%C5%BEadavky%20na%20rozvrhZS_soubory/formfit.css">
+<script type="text/javascript">
+<!--
+form_change = false;
+function showHide(el)
+{
+    var bdiv=document.getElementById(el);
+    if (bdiv==null) return false;
+    if (bdiv.style.display=='block') bdiv.style.display='none'; 
+    else bdiv.style.display='block';
+    return false;
+}
+
+function mouseOver(el)
+{
+    el.style.borderStyle = 'inset';
+}
+
+function mouseOut(el)
+{
+    el.style.borderStyle = 'outset'; 
+}
+
+function mouseClick(ev, uri)
+{
+    if (!form_change) {
+	if (typeof window.event != 'undefined') window.event.returnValue = false;
+	else ev.preventDefault();
+	window.location = uri;   
+    }
+}
+// -->
+</script>
+</head>
+<body bgcolor="#e8f0f0"><table class="menu2" width="100%" bgcolor="#0063A5" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><th class="menu" onclick="mouseClick(event, '/FIT/db/vyuka/ucitel/zima/')" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"><a class="menu" href="https://wis.fit.vutbr.cz/FIT/db/vyuka/ucitel/zima/">&nbsp;&nbsp;Zima 16/17&nbsp;&nbsp;</a></th>
+<th class="menu" onclick="mouseClick(event, '/FIT/db/vyuka/ucitel/leto/')" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"><a class="menu" href="https://wis.fit.vutbr.cz/FIT/db/vyuka/ucitel/leto/">&nbsp;&nbsp;Léto 16/17&nbsp;&nbsp;</a></th>
+<th class="menu" onclick="mouseClick(event, '/FIT/db/vyuka/szz/')" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"><a class="menu" href="https://wis.fit.vutbr.cz/FIT/db/vyuka/szz/">&nbsp;&nbsp;DP a SZZ&nbsp;&nbsp;</a></th>
+<th class="menu" onclick="mouseClick(event, '/FIT/db/vyuka/garant/')" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"><a class="menu" href="https://wis.fit.vutbr.cz/FIT/db/vyuka/garant/">&nbsp;&nbsp;Programy a obory&nbsp;&nbsp;</a></th>
+<th class="menu" onclick="mouseClick(event, '/FIT/db/vyuka/so/')" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"><a class="menu" href="https://wis.fit.vutbr.cz/FIT/db/vyuka/so/">&nbsp;&nbsp;Studijní odd.&nbsp;&nbsp;</a></th>
+<th class="menu" onclick="mouseClick(event, '/FIT/db/vyuka/adm/')" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"><a class="menu" href="https://wis.fit.vutbr.cz/FIT/db/vyuka/adm/">&nbsp;&nbsp;Přijímačky&nbsp;&nbsp;</a></th>
+<th class="menu" onclick="mouseClick(event, '/FIT/db/vyuka/cat/')" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"><a class="menu" href="https://wis.fit.vutbr.cz/FIT/db/vyuka/cat/">&nbsp;&nbsp;Číselníky&nbsp;&nbsp;</a></th>
+<th class="menu" onclick="mouseClick(event, '/FIT/db/vyuka/ucitel/course-req-print.php.en?rok=2016&amp;sem=Z&amp;table=Tabulka+pro+tisk&amp;tab1_o=1&amp;tab1_f2=&amp;tab1_fo2=like&amp;tab1_f3=&amp;tab1_fo3=like&amp;tab1_f4=&amp;tab1_fo4=like&amp;tab1_f5=&amp;tab1_fo5=like&amp;tab1_f6=&amp;tab1_fo6=%3D')" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" align="right" width="26"><a href="https://wis.fit.vutbr.cz/FIT/db/vyuka/ucitel/course-req-print.php.en?rok=2016&amp;sem=Z&amp;table=Tabulka+pro+tisk&amp;tab1_o=1&amp;tab1_f2=&amp;tab1_fo2=like&amp;tab1_f3=&amp;tab1_fo3=like&amp;tab1_f4=&amp;tab1_fo4=like&amp;tab1_f5=&amp;tab1_fo5=like&amp;tab1_f6=&amp;tab1_fo6=%3D"><img class="FITlogo" src="IS%20FIT%20-%20Po%C5%BEadavky%20na%20rozvrhZS_soubory/flag2_gb.gif" alt="" height="20" width="26" border="0"></a></th>
+</tr></tbody></table>
+<table width="100%" bgcolor="#FFF8DC" border="0" cellpadding="4" cellspacing="0">
+<tbody><tr>
+<td style="border-left: 1px solid #808080; border-right: 1px solid #808080" width="100%"><span class="form_title2"><a class="menu2" href="https://wis.fit.vutbr.cz/FIT/db/"><img src="IS%20FIT%20-%20Po%C5%BEadavky%20na%20rozvrhZS_soubory/homeblue.gif" alt="[home]" style="valign:middle" border="0">IS FIT</a> &gt; <a class="menu2" href="https://wis.fit.vutbr.cz/FIT/db/vyuka/">Výuka</a> &gt; <a class="menu2" href="https://wis.fit.vutbr.cz/FIT/db/vyuka/ucitel/">Učitelé</a> &gt; </span><span class="form_title">Požadavky na rozvrh</span>
+</td>
+<td style="border-right: 1px solid #808080" onclick="mouseClick(event, 'index.php')" align="right" nowrap="nowrap">&nbsp;<a class="menu2" href="https://wis.fit.vutbr.cz/FIT/db/vyuka/ucitel/index.php">Zpět na index</a>&nbsp;</td>
+</tr>
+</tbody></table><table width="100%" bgcolor="#e8f0f0" border="1" bordercolor="#808080" cellpadding="4" cellspacing="0">
+<tbody><tr><td><br><a href="https://wis.fit.vutbr.cz/FIT/db/vyuka/ucitel/course-req-print.php?sem=Z&amp;rok=2016">Zpět na Požadavky na rozvrh</a><br><br>
+
+<table style="border-collapse: collapse" border="1" bordercolor="#000000" cellpadding="2">
+<tbody><tr valign="middle">
+<th rowspan="2">Předmět</th>
+<th rowspan="2">P pro</th>
+<th rowspan="2">PV pro</th>
+<th rowspan="2">Počet</th>
+<th rowspan="2">Max.</th>
+<th rowspan="2">Garant</th>
+<th rowspan="2">Přednášející</th>
+
+<th rowspan="2">Vyučující</th>
+<th rowspan="2">Typ</th>
+<th rowspan="2">Skupin</th>
+<th rowspan="2">Kapacita</th>
+<th rowspan="2">Hodin</th>
+<th rowspan="2">Týden</th>
+<th rowspan="2">Místnosti</th>
+<th rowspan="2">Poznámka</th>
+
+<th colspan="5">Vyhovoval by mi termín</th>
+<th colspan="4">Nemohu učit</th>
+</tr>
+
+<tr align="center" valign="middle">
+<td>Den</td>
+<td>Od</td>
+<td>Do</td>
+<td>Prio</td>
+<td>Poznámka</td>
+<td>Den</td>
+<td>Od</td>
+<td>Do</td>
+<td>Poznámka</td>
+</tr>
+<tr>
+<td rowspan="2">ACH</td>
+<td rowspan="2">MPV</td>
+<td rowspan="2">MBS, MMI, MSK</td>
+<td rowspan="2">45</td>
+<td rowspan="2">80</td>
+<td rowspan="2">Dvořák&nbsp;Václav,&nbsp;prof.&nbsp;Ing.,&nbsp;DrSc.</td>
+<td rowspan="2">Dvořák&nbsp;Václav,&nbsp;prof.&nbsp;Ing.,&nbsp;DrSc.<br>Jaroš&nbsp;Jiří,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">Dvořák&nbsp;Václav,&nbsp;prof.&nbsp;Ing.,&nbsp;DrSc.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">1</td>
+<td rowspan="2">35</td>
+<td rowspan="2">3</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+<td>úterý</td>
+<td>10:00</td>
+<td>12:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="2"></td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>10:00</td>
+<td>12:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="5">AIS</td>
+<td rowspan="5">MIS</td>
+<td rowspan="5">MBS, MMI, MPV, MSK</td>
+<td rowspan="5">80</td>
+<td rowspan="5">150</td>
+<td rowspan="5">Zendulka&nbsp;Jaroslav,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="5">Rychlý&nbsp;Marek,&nbsp;RNDr.,&nbsp;Ph.D.<br>Zendulka&nbsp;Jaroslav,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="5">Zendulka&nbsp;Jaroslav,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="5">přednáška</td>
+<td rowspan="5">1</td>
+<td rowspan="5">100</td>
+<td rowspan="5">3</td>
+<td rowspan="5">každý</td>
+<td rowspan="5">D0206, E112</td>
+<td rowspan="5">Ideálně jako vloni, tj. čtvrtek odpoledne (13-16)</td>
+<td>čtvrtek</td>
+<td>13:00</td>
+<td>15:50</td>
+<td>low</td>
+<td>jako vloni</td>
+<td>pondělí</td>
+<td>07:00</td>
+<td>09:50</td>
+<td></td>
+</tr>
+<tr><td colspan="5" rowspan="4"></td>
+<td>úterý</td>
+<td>07:00</td>
+<td>09:50</td>
+<td></td>
+</tr>
+<tr><td>středa</td>
+<td>07:00</td>
+<td>14:50</td>
+<td>věd. rady</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>07:00</td>
+<td>12:50</td>
+<td>věd. rady</td>
+</tr>
+<tr><td>pátek</td>
+<td>07:00</td>
+<td>10:50</td>
+<td>angličtina</td>
+</tr>
+<tr>
+<td rowspan="3">BIO</td>
+<td rowspan="3">MBI, MBS</td>
+<td rowspan="3">MIN</td>
+<td rowspan="3">81</td>
+<td rowspan="3">154</td>
+<td rowspan="3">Drahanský&nbsp;Martin,&nbsp;doc.&nbsp;Ing.,&nbsp;Dipl.-Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">Drahanský&nbsp;Martin,&nbsp;doc.&nbsp;Ing.,&nbsp;Dipl.-Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">Drahanský&nbsp;Martin,&nbsp;doc.&nbsp;Ing.,&nbsp;Dipl.-Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">1</td>
+<td rowspan="3">154</td>
+<td rowspan="3">3</td>
+<td rowspan="3">každý</td>
+<td rowspan="3"></td>
+<td rowspan="3">Ideální jsou úterky. Pokud bych si mohl vymýšlet, tak nejlepší je dát ráno v úterý jeden předmět a po obědě druhý.</td>
+<td>-</td>
+<td>07:00</td>
+<td>10:50</td>
+<td>low</td>
+<td>Preferuji rána (klidně hned od 7 hodin)</td>
+<td>úterý</td>
+<td>16:00</td>
+<td>20:50</td>
+<td></td>
+</tr>
+<tr><td>úterý</td>
+<td>07:00</td>
+<td>10:50</td>
+<td>low</td>
+<td></td>
+<td>čtvrtek</td>
+<td>09:00</td>
+<td>12:50</td>
+<td>Kolegium děkana</td>
+</tr>
+<tr><td>úterý</td>
+<td>12:00</td>
+<td>15:50</td>
+<td>low</td>
+<td></td>
+<td>čtvrtek</td>
+<td>16:00</td>
+<td>20:50</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="4">BIS</td>
+<td rowspan="4">MBS, MIS, MSK</td>
+<td rowspan="4">MBI, MIN, MMM, MPV</td>
+<td rowspan="4">150</td>
+<td rowspan="4">150</td>
+<td rowspan="4">Hanáček&nbsp;Petr,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="4">Hanáček&nbsp;Petr,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.<br>Malinka&nbsp;Kamil,&nbsp;Mgr.,&nbsp;Ph.D.</td>
+<td rowspan="4">Hanáček&nbsp;Petr,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="4">přednáška</td>
+<td rowspan="4">1</td>
+<td rowspan="4">200</td>
+<td rowspan="4">3</td>
+<td rowspan="4">každý</td>
+<td rowspan="4"></td>
+<td rowspan="4">Potřeboval bych mít BMS a BIS ve středu, tak od 9 do 17, v libovolném pořadí</td>
+<td>středa</td>
+<td>13:00</td>
+<td>15:50</td>
+<td>low</td>
+<td>Potřeboval bych mít BMS a BIS ve středu, tak od 9 do 17, v libovolném pořadí</td>
+<td>pondělí</td>
+<td>08:00</td>
+<td>11:50</td>
+<td>Rektorát VUT</td>
+</tr>
+<tr><td colspan="5" rowspan="3"></td>
+<td>úterý</td>
+<td>08:00</td>
+<td>15:50</td>
+<td>Senát, komise, kolegia rektora</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>09:00</td>
+<td>16:50</td>
+<td>RKD, schůze ústavu</td>
+</tr>
+<tr><td>pátek</td>
+<td>09:00</td>
+<td>15:50</td>
+<td>Mimo Brno</td>
+</tr>
+<tr>
+<td rowspan="4">BMS</td>
+<td rowspan="4">MIN, MSK</td>
+<td rowspan="4">MBS, MIS</td>
+<td rowspan="4">125</td>
+<td rowspan="4">154</td>
+<td rowspan="4">Hanáček&nbsp;Petr,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="4">Hanáček&nbsp;Petr,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="4">Hanáček&nbsp;Petr,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="4">přednáška</td>
+<td rowspan="4">1</td>
+<td rowspan="4">150</td>
+<td rowspan="4">3</td>
+<td rowspan="4">každý</td>
+<td rowspan="4"></td>
+<td rowspan="4">Potřeboval bych mít BMS a BIS ve středu, tak od 9 do 17, v libovolném pořadí</td>
+<td>středa</td>
+<td>09:00</td>
+<td>11:50</td>
+<td>low</td>
+<td>Potřeboval bych mít BMS a BIS ve středu, tak od 9 do 17, v libovolném pořadí</td>
+<td>pondělí</td>
+<td>08:00</td>
+<td>11:50</td>
+<td>Rektorát VUT</td>
+</tr>
+<tr><td colspan="5" rowspan="3"></td>
+<td>úterý</td>
+<td>08:00</td>
+<td>15:50</td>
+<td>Senát, komise, kolegia rektora</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>09:00</td>
+<td>16:50</td>
+<td>RKD, schůze ústavu</td>
+</tr>
+<tr><td>pátek</td>
+<td>09:00</td>
+<td>15:50</td>
+<td>Mimo Brno</td>
+</tr>
+<tr>
+<td rowspan="1">EIP</td>
+<td rowspan="1">MMI</td>
+<td rowspan="1"></td>
+<td rowspan="1">25</td>
+<td rowspan="1">64</td>
+<td rowspan="1">Květoňová&nbsp;Šárka,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Květoňová&nbsp;Šárka,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Květoňová&nbsp;Šárka,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">50</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td>čtvrtek</td>
+<td>10:00</td>
+<td>11:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="1">FAV</td>
+<td rowspan="1">MMM</td>
+<td rowspan="1">MBS, MIN, MIS, MSK</td>
+<td rowspan="1">29</td>
+<td rowspan="1">64</td>
+<td rowspan="1">Vojnar&nbsp;Tomáš,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Vojnar&nbsp;Tomáš,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Vojnar&nbsp;Tomáš,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">20</td>
+<td rowspan="1">3</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">A112/113</td>
+<td rowspan="1">Prosím ne ve stejný den jako STI.</td>
+<td>úterý</td>
+<td>14:00</td>
+<td>16:50</td>
+<td>low</td>
+<td>Pokud ožno ponechat po přednášce 1 hod pauzu: některé přednášky bývají delší než 3 hod.</td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="1">FIT</td>
+<td rowspan="1"></td>
+<td rowspan="1">MBI, MBS, MGM, MIN, MIS, MMI, MMM, MPV, MSK</td>
+<td rowspan="1">50</td>
+<td rowspan="1">50</td>
+<td rowspan="1">Klapetek&nbsp;Milan,&nbsp;Mgr.</td>
+<td rowspan="1"></td>
+<td rowspan="1">Klapetek&nbsp;Milan,&nbsp;Mgr.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">80</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">G202</td>
+<td rowspan="1">Blok společně s PRM a RET</td>
+<td>čtvrtek</td>
+<td>13:00</td>
+<td>18:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="4">GMU</td>
+<td rowspan="4"></td>
+<td rowspan="4">MGM, MPV</td>
+<td rowspan="4">39</td>
+<td rowspan="4">80</td>
+<td rowspan="4">Drábek&nbsp;Vladimír,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="4">Drábek&nbsp;Vladimír,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="4">Drábek&nbsp;Vladimír,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="4">přednáška</td>
+<td rowspan="4">1</td>
+<td rowspan="4">80</td>
+<td rowspan="4">2</td>
+<td rowspan="4">každý</td>
+<td rowspan="4">G202, E105</td>
+<td rowspan="4"></td>
+<td>pondělí</td>
+<td>09:00</td>
+<td>15:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="4"></td>
+</tr>
+<tr><td>úterý</td>
+<td>09:00</td>
+<td>15:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr><td>středa</td>
+<td>09:00</td>
+<td>15:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>09:00</td>
+<td>15:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2">GUX</td>
+<td rowspan="2"></td>
+<td rowspan="2">MGM, MIS</td>
+<td rowspan="2">30</td>
+<td rowspan="2">64</td>
+<td rowspan="2">Lampa&nbsp;Petr,&nbsp;Ing.</td>
+<td rowspan="2">Lampa&nbsp;Petr,&nbsp;Ing.</td>
+<td rowspan="2">Lampa&nbsp;Petr,&nbsp;Ing.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">1</td>
+<td rowspan="2">40</td>
+<td rowspan="2">2</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+<td>středa</td>
+<td>08:00</td>
+<td>09:50</td>
+<td>low</td>
+<td></td>
+<td>úterý</td>
+<td>13:00</td>
+<td>16:50</td>
+<td></td>
+</tr>
+<tr><td colspan="5" rowspan="1"></td>
+<td>čtvrtek</td>
+<td>07:00</td>
+<td>13:50</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2">GZN</td>
+<td rowspan="2">MGM</td>
+<td rowspan="2"></td>
+<td rowspan="2">51</td>
+<td rowspan="2">80</td>
+<td rowspan="2">Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">Beran&nbsp;Vítězslav,&nbsp;Ing.,&nbsp;Ph.D.<br>Černocký&nbsp;Jan,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.<br>Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">1</td>
+<td rowspan="2">80</td>
+<td rowspan="2">2</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+<td colspan="5" rowspan="2"></td>
+<td>-</td>
+<td>07:00</td>
+<td>07:50</td>
+<td>Vozím děti do školy</td>
+</tr>
+<tr><td>úterý</td>
+<td>07:00</td>
+<td>11:50</td>
+<td>meetingy</td>
+</tr>
+<tr>
+<td rowspan="3">HSC</td>
+<td rowspan="3">MGM, MPV, MSK</td>
+<td rowspan="3">MBI, MBS, MIN, MMI</td>
+<td rowspan="3">115</td>
+<td rowspan="3">200</td>
+<td rowspan="3">Fučík&nbsp;Otto,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Fučík&nbsp;Otto,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Fučík&nbsp;Otto,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">1</td>
+<td rowspan="3">200</td>
+<td rowspan="3">3</td>
+<td rowspan="3">každý</td>
+<td rowspan="3"></td>
+<td rowspan="3"></td>
+<td colspan="5" rowspan="3"></td>
+<td>úterý</td>
+<td>13:00</td>
+<td>16:50</td>
+<td>senát</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>07:00</td>
+<td>13:50</td>
+<td>kolegium děkana</td>
+</tr>
+<tr><td>pátek</td>
+<td>07:00</td>
+<td>20:50</td>
+<td>Nedostatečná účast na přednáškách - studenti pak mají problémy</td>
+</tr>
+<tr>
+<td rowspan="2">IAL</td>
+<td rowspan="2">BIT</td>
+<td rowspan="2"></td>
+<td rowspan="2">478</td>
+<td rowspan="2">600</td>
+<td rowspan="2">Honzík&nbsp;Jan&nbsp;M.,&nbsp;prof.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="2">Burgetová&nbsp;Ivana,&nbsp;Ing.,&nbsp;Ph.D.<br>Honzík&nbsp;Jan&nbsp;M.,&nbsp;prof.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="2">Burgetová&nbsp;Ivana,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">2</td>
+<td rowspan="2">300</td>
+<td rowspan="2">3</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2">Potřebovala bych, aby druhé přednášky během týdne z IFJ a IAL, byly ve stejný den za sebou.</td>
+<td>úterý</td>
+<td>08:00</td>
+<td>10:50</td>
+<td>low</td>
+<td>Pokud by rozvrh pro IAL, IFJ a ZZN mohl zůstat stejný jako loni, bylo by to asi ideální.</td>
+<td colspan="4" rowspan="2"></td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>08:00</td>
+<td>10:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="4">IDA</td>
+<td rowspan="4">BIT</td>
+<td rowspan="4"></td>
+<td rowspan="4">587</td>
+<td rowspan="4">700</td>
+<td rowspan="4">Kovár&nbsp;Martin,&nbsp;doc.&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="4">Hliněná&nbsp;Dana,&nbsp;doc.&nbsp;RNDr.,&nbsp;Ph.D.<br>Kovár&nbsp;Martin,&nbsp;doc.&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="2">Hliněná&nbsp;Dana,&nbsp;doc.&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">1</td>
+<td rowspan="2">350</td>
+<td rowspan="2">4</td>
+<td rowspan="2">každý</td>
+<td rowspan="2">D105+D0207</td>
+<td rowspan="2"></td>
+<td>pondělí</td>
+<td>08:00</td>
+<td>09:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="2"></td>
+</tr>
+<tr><td>úterý</td>
+<td>08:00</td>
+<td>09:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr><td rowspan="2">Kovár&nbsp;Martin,&nbsp;doc.&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">1</td>
+<td rowspan="2">350</td>
+<td rowspan="2">4</td>
+<td rowspan="2">každý</td>
+<td rowspan="2">T12</td>
+<td rowspan="2"></td>
+<td>pondělí</td>
+<td>11:00</td>
+<td>12:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="2"></td>
+</tr>
+<tr><td>úterý</td>
+<td>11:00</td>
+<td>12:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="6">IEL</td>
+<td rowspan="6">BIT</td>
+<td rowspan="6"></td>
+<td rowspan="6">605</td>
+<td rowspan="6">750</td>
+<td rowspan="6">Kunovský&nbsp;Jiří,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="6">Kunovský&nbsp;Jiří,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.<br>Růžička&nbsp;Richard,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.,&nbsp;MBA<br>Šátek&nbsp;Václav,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="4">Kunovský&nbsp;Jiří,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="4">přednáška</td>
+<td rowspan="4">2</td>
+<td rowspan="4">350</td>
+<td rowspan="4">3</td>
+<td rowspan="4">každý</td>
+<td rowspan="4"></td>
+<td rowspan="4">Pokud možno jako minulý rok (2 hod. + 1 hod. před cvičením)</td>
+<td>středa</td>
+<td>07:00</td>
+<td>08:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="4"></td>
+</tr>
+<tr><td>středa</td>
+<td>14:00</td>
+<td>14:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>07:00</td>
+<td>08:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>14:00</td>
+<td>14:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr><td rowspan="2">Kunovský&nbsp;Jiří,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="2">cvičení</td>
+<td rowspan="2">2</td>
+<td rowspan="2">350</td>
+<td rowspan="2">1</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2">Pokud možno jako minulý rok</td>
+<td>středa</td>
+<td>15:00</td>
+<td>15:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="2"></td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>15:00</td>
+<td>15:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2">IFJ</td>
+<td rowspan="2">BIT</td>
+<td rowspan="2"></td>
+<td rowspan="2">528</td>
+<td rowspan="2">600</td>
+<td rowspan="2">Meduna&nbsp;Alexander,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td rowspan="2">Burgetová&nbsp;Ivana,&nbsp;Ing.,&nbsp;Ph.D.<br>Křivka&nbsp;Zbyněk,&nbsp;Ing.,&nbsp;Ph.D.<br>Meduna&nbsp;Alexander,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td rowspan="2">Burgetová&nbsp;Ivana,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">2</td>
+<td rowspan="2">300</td>
+<td rowspan="2">3</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2">Potřebovala bych, aby druhé přednášky během týdne z IFJ a IAL, byly ve stejný den za sebou.</td>
+<td>úterý</td>
+<td>11:00</td>
+<td>13:50</td>
+<td>low</td>
+<td>Pokud by rozvrh pro IAL, IFJ a ZZN mohl zůstat stejný jako loni, bylo by to asi ideální.</td>
+<td colspan="4" rowspan="2"></td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>11:00</td>
+<td>13:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="1">IIS</td>
+<td rowspan="1">BIT</td>
+<td rowspan="1"></td>
+<td rowspan="1">359</td>
+<td rowspan="1">500</td>
+<td rowspan="1">Hruška&nbsp;Tomáš,&nbsp;prof.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="1">Hruška&nbsp;Tomáš,&nbsp;prof.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="1">Hruška&nbsp;Tomáš,&nbsp;prof.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">400</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td>pondělí</td>
+<td>10:00</td>
+<td>11:50</td>
+<td>low</td>
+<td>v úterý chodím občas na kolegium rektora</td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="1">ILI</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td rowspan="1">20</td>
+<td rowspan="1">20</td>
+<td rowspan="1">Vojnar&nbsp;Tomáš,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Grác&nbsp;Marek</td>
+<td rowspan="1">Grác&nbsp;Marek</td>
+<td rowspan="1">poč.lab.</td>
+<td rowspan="1">1</td>
+<td rowspan="1">20</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">Je zapotřebí laboratoř, kde je 20 míst, projektor a možnost, aby studenti použili vlastní notebooky.</td>
+<td rowspan="1">Za Marka Gráce vložil Tomáš Vojnar.</td>
+<td>úterý</td>
+<td>10:00</td>
+<td>18:50</td>
+<td>low</td>
+<td>Preferované je úterý, na čase tolik nezáleží. Jedná se o dvě hodiny týdně.</td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="2">IMP</td>
+<td rowspan="2">BIT</td>
+<td rowspan="2"></td>
+<td rowspan="2">379</td>
+<td rowspan="2">500</td>
+<td rowspan="2">Růžička&nbsp;Richard,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.,&nbsp;MBA</td>
+<td rowspan="2">Bidlo&nbsp;Michal,&nbsp;Ing.,&nbsp;Ph.D.<br>Růžička&nbsp;Richard,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.,&nbsp;MBA<br>Schwarz&nbsp;Josef,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.<br>Strnadel&nbsp;Josef,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">Růžička&nbsp;Richard,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.,&nbsp;MBA</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">1</td>
+<td rowspan="2">400</td>
+<td rowspan="2">3</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2">Nedávat do kolize s INP</td>
+<td>-</td>
+<td>10:00</td>
+<td>18:50</td>
+<td>low</td>
+<td></td>
+<td>-</td>
+<td>07:00</td>
+<td>07:50</td>
+<td>pokud možno po 8:00</td>
+</tr>
+<tr><td colspan="5" rowspan="1"></td>
+<td>-</td>
+<td>19:00</td>
+<td>20:50</td>
+<td>pokud možno max. do 19:00</td>
+</tr>
+<tr>
+<td rowspan="2">IMS</td>
+<td rowspan="2">BIT</td>
+<td rowspan="2"></td>
+<td rowspan="2">432</td>
+<td rowspan="2">600</td>
+<td rowspan="2">Peringer&nbsp;Petr,&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="2">Peringer&nbsp;Petr,&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="2">Peringer&nbsp;Petr,&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">1</td>
+<td rowspan="2">450</td>
+<td rowspan="2">3</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+<td colspan="5" rowspan="2"></td>
+<td>-</td>
+<td>07:00</td>
+<td>08:50</td>
+<td>v noci nepracuji</td>
+</tr>
+<tr><td>pátek</td>
+<td>07:00</td>
+<td>20:50</td>
+<td>studenti v pátek nechodí a pak mají problémy</td>
+</tr>
+<tr>
+<td rowspan="1">INI</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td rowspan="1">64</td>
+<td rowspan="1">64</td>
+<td rowspan="1">Rychlý&nbsp;Marek,&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="1">Rychlý&nbsp;Marek,&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="1">Rychlý&nbsp;Marek,&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">60</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1"></td>
+<td rowspan="1">bez kolize AIS, PDI a SRI</td>
+<td colspan="5" rowspan="1"></td>
+<td>-</td>
+<td>07:00</td>
+<td>09:50</td>
+<td>školka</td>
+</tr>
+<tr>
+<td rowspan="2">INM</td>
+<td rowspan="2">BIT</td>
+<td rowspan="2"></td>
+<td rowspan="2">518</td>
+<td rowspan="2">600</td>
+<td rowspan="2">Novák&nbsp;Michal,&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="2">Novák&nbsp;Michal,&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="2">Novák&nbsp;Michal,&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">2</td>
+<td rowspan="2">300</td>
+<td rowspan="2">2</td>
+<td rowspan="2">každý</td>
+<td rowspan="2">T10/T12</td>
+<td rowspan="2"></td>
+<td>pondělí</td>
+<td>09:00</td>
+<td>10:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="2"></td>
+</tr>
+<tr><td>pondělí</td>
+<td>11:00</td>
+<td>12:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3">INP</td>
+<td rowspan="3">BIT</td>
+<td rowspan="3"></td>
+<td rowspan="3">476</td>
+<td rowspan="3">600</td>
+<td rowspan="3">Sekanina&nbsp;Lukáš,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">Bidlo&nbsp;Michal,&nbsp;Ing.,&nbsp;Ph.D.<br>Sekanina&nbsp;Lukáš,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">Sekanina&nbsp;Lukáš,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">2</td>
+<td rowspan="3">300</td>
+<td rowspan="3">3</td>
+<td rowspan="3">každý</td>
+<td rowspan="3"></td>
+<td rowspan="3"></td>
+<td colspan="5" rowspan="3"></td>
+<td>úterý</td>
+<td>13:00</td>
+<td>15:50</td>
+<td>AS FIT</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>09:00</td>
+<td>12:50</td>
+<td>KD</td>
+</tr>
+<tr><td>pátek</td>
+<td>12:00</td>
+<td>15:50</td>
+<td>seminář UPSY a akce UPSY</td>
+</tr>
+<tr>
+<td rowspan="1">IPS</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td rowspan="1">50</td>
+<td rowspan="1">150</td>
+<td rowspan="1">Smrčka&nbsp;Aleš,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Peringer&nbsp;Petr,&nbsp;Dr.&nbsp;Ing.<br>Rogalewicz&nbsp;Adam,&nbsp;Mgr.,&nbsp;Ph.D.<br>Smrčka&nbsp;Aleš,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Smrčka&nbsp;Aleš,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">cvičení</td>
+<td rowspan="1">1</td>
+<td rowspan="1">150</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1"></td>
+<td rowspan="1">nesmí být v kolizi s přednáškami a cvičeními IZP (Smrčka), s přednáškami SMT (Rogalewicz) a s přednáškami IMS (Peringer).</td>
+<td colspan="5" rowspan="1"></td>
+<td>-</td>
+<td>07:00</td>
+<td>08:50</td>
+<td>vozím děti do školky</td>
+</tr>
+<tr>
+<td rowspan="4">IPZ</td>
+<td rowspan="4">BIT</td>
+<td rowspan="4"></td>
+<td rowspan="4">380</td>
+<td rowspan="4">500</td>
+<td rowspan="4">Kotásek&nbsp;Zdeněk,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="4">Kotásek&nbsp;Zdeněk,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="4">Kotásek&nbsp;Zdeněk,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="4">přednáška</td>
+<td rowspan="4">1</td>
+<td rowspan="4">430</td>
+<td rowspan="4">3</td>
+<td rowspan="4">každý</td>
+<td rowspan="4">D105, D0207</td>
+<td rowspan="4">Dát do bloku za IMS (ideálně IPZ od 11:00, v horším případě od 10:00).</td>
+<td colspan="5" rowspan="4"></td>
+<td>pondělí</td>
+<td>07:00</td>
+<td>20:50</td>
+<td>Lepší by bylo se pondělí vyhnout, ale pokud nutno, tak lze.</td>
+</tr>
+<tr><td>úterý</td>
+<td>13:00</td>
+<td>15:50</td>
+<td>senát</td>
+</tr>
+<tr><td>středa</td>
+<td>16:00</td>
+<td>20:50</td>
+<td>kvůli AS v úterý by mi více vyhovovala výuka ve středu</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>08:00</td>
+<td>12:50</td>
+<td>kolegium dekana</td>
+</tr>
+<tr>
+<td rowspan="1">ISC</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td rowspan="1">0</td>
+<td rowspan="1">300</td>
+<td rowspan="1">Květoňová&nbsp;Šárka,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Květoňová&nbsp;Šárka,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Květoňová&nbsp;Šárka,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">160</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td>úterý</td>
+<td>14:00</td>
+<td>15:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="6">ISS</td>
+<td rowspan="6">BIT</td>
+<td rowspan="6"></td>
+<td rowspan="6">480</td>
+<td rowspan="6">600</td>
+<td rowspan="6">Černocký&nbsp;Jan,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="6">Černocký&nbsp;Jan,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Černocký&nbsp;Jan,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">2</td>
+<td rowspan="3">300</td>
+<td rowspan="3">3</td>
+<td rowspan="3">každý</td>
+<td rowspan="3"></td>
+<td rowspan="3"></td>
+<td colspan="5" rowspan="3"></td>
+<td>pondělí</td>
+<td>13:00</td>
+<td>14:50</td>
+<td>speech meeting</td>
+</tr>
+<tr><td>úterý</td>
+<td>13:00</td>
+<td>14:50</td>
+<td>senát</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>07:00</td>
+<td>12:50</td>
+<td>KD</td>
+</tr>
+<tr><td rowspan="3">Černocký&nbsp;Jan,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">cvičení</td>
+<td rowspan="3">1</td>
+<td rowspan="3">20</td>
+<td rowspan="3">2</td>
+<td rowspan="3">lichý</td>
+<td rowspan="3"></td>
+<td rowspan="3">Numerická cvičení - počet skupin odhadnout</td>
+<td colspan="5" rowspan="3"></td>
+<td>pondělí</td>
+<td>13:00</td>
+<td>14:50</td>
+<td>speech meeting</td>
+</tr>
+<tr><td>úterý</td>
+<td>13:00</td>
+<td>14:50</td>
+<td>senát</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>07:00</td>
+<td>12:50</td>
+<td>KD</td>
+</tr>
+<tr>
+<td rowspan="2">ITU</td>
+<td rowspan="2">BIT</td>
+<td rowspan="2"></td>
+<td rowspan="2">383</td>
+<td rowspan="2">500</td>
+<td rowspan="2">Beran&nbsp;Vítězslav,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">Beran&nbsp;Vítězslav,&nbsp;Ing.,&nbsp;Ph.D.<br>Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.<br>Klicnar&nbsp;Lukáš,&nbsp;Ing.<br>Mlích&nbsp;Jozef,&nbsp;Ing.<br>Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="2">Beran&nbsp;Vítězslav,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">poč.lab.</td>
+<td rowspan="2">1</td>
+<td rowspan="2">410</td>
+<td rowspan="2">2</td>
+<td rowspan="2">každý</td>
+<td rowspan="2">O203 a O204 - obě místnosti - učíme propojeně</td>
+<td rowspan="2"></td>
+<td>pondělí</td>
+<td>07:00</td>
+<td>18:50</td>
+<td>low</td>
+<td>poč.lab. - O203 a O204 - obě místnosti - učíme propojeně</td>
+<td>čtvrtek</td>
+<td>08:00</td>
+<td>11:50</td>
+<td>KD</td>
+</tr>
+<tr><td>úterý</td>
+<td>07:00</td>
+<td>18:50</td>
+<td>low</td>
+<td>poč.lab. - O203 a O204 - obě místnosti - učíme propojeně</td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="6">IUS</td>
+<td rowspan="6">BIT</td>
+<td rowspan="6"></td>
+<td rowspan="6">632</td>
+<td rowspan="6">750</td>
+<td rowspan="6">Křena&nbsp;Bohuslav,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="6">Kočí&nbsp;Radek,&nbsp;Ing.,&nbsp;Ph.D.<br>Křena&nbsp;Bohuslav,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">Kočí&nbsp;Radek,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">1</td>
+<td rowspan="3">350</td>
+<td rowspan="3">3</td>
+<td rowspan="3">každý</td>
+<td rowspan="3"></td>
+<td rowspan="3"></td>
+<td>pondělí</td>
+<td>09:00</td>
+<td>17:50</td>
+<td>low</td>
+<td></td>
+<td>úterý</td>
+<td>07:00</td>
+<td>12:50</td>
+<td>Komise RVŠ (není nezbytně nutné)</td>
+</tr>
+<tr><td>středa</td>
+<td>09:00</td>
+<td>16:50</td>
+<td>low</td>
+<td></td>
+<td>úterý</td>
+<td>13:00</td>
+<td>20:50</td>
+<td>Komise RVŠ, účast na AS FIT</td>
+</tr>
+<tr><td>pátek</td>
+<td>09:00</td>
+<td>15:50</td>
+<td>low</td>
+<td></td>
+<td>čtvrtek</td>
+<td>07:00</td>
+<td>20:50</td>
+<td>Sněm RVŠ, komise RVŠ, Seminář UITS</td>
+</tr>
+<tr><td rowspan="3">Křena&nbsp;Bohuslav,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">1</td>
+<td rowspan="3">350</td>
+<td rowspan="3">3</td>
+<td rowspan="3">každý</td>
+<td rowspan="3">D105 + D0207</td>
+<td rowspan="3">Prosím, neplánovat těsně po jiné přednášce 1BIT (ani 
+před) - studenti se ještě nevydrží tak dlouho soustředit. Také prosím 
+naplánovat na jiný den, než bude mít přednášku Radek - při vzájemném 
+záskoku je 6 hodin přednášek těžko zvládnutelných. Děkuji.</td>
+<td>pondělí</td>
+<td>09:00</td>
+<td>17:50</td>
+<td>low</td>
+<td>platí pro všechny dny vyjma překážek uvedených níže</td>
+<td>úterý</td>
+<td>12:00</td>
+<td>14:50</td>
+<td>AS FIT</td>
+</tr>
+<tr><td colspan="5" rowspan="2"></td>
+<td>středa</td>
+<td>12:00</td>
+<td>15:50</td>
+<td>RSP</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>09:00</td>
+<td>12:50</td>
+<td>KD</td>
+</tr>
+<tr>
+<td rowspan="4">IZP</td>
+<td rowspan="4">BIT</td>
+<td rowspan="4"></td>
+<td rowspan="4">598</td>
+<td rowspan="4">750</td>
+<td rowspan="4">Kreslíková&nbsp;Jitka,&nbsp;doc.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td rowspan="4">Kreslíková&nbsp;Jitka,&nbsp;doc.&nbsp;RNDr.,&nbsp;CSc.<br>Smrčka&nbsp;Aleš,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Kreslíková&nbsp;Jitka,&nbsp;doc.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">360</td>
+<td rowspan="1">3</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">D105+D020x</td>
+<td rowspan="1">Přednášky (1BIA, 1BIB), pokud možno plánovat na začátku týdne dva dny za sebou.</td>
+<td>-</td>
+<td>09:00</td>
+<td>18:50</td>
+<td>low</td>
+<td>Přednášku v jednom dni rozdělit na 2 hod. (dopoledne) +1 hod. 
+(odpoledne), na odpolední hodinu bezprostředně navázat 1 hod. 
+demonstračního cvičení</td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr><td rowspan="1">Smrčka&nbsp;Aleš,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">360</td>
+<td rowspan="1">3</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">D105+D020x</td>
+<td rowspan="1">Přednášky (1BIA, 1BIB), pokud možno plánovat dva dny za sebou.</td>
+<td>-</td>
+<td>09:00</td>
+<td>18:50</td>
+<td>low</td>
+<td>Přednášku v jednom dni rozdělit na 2 hod. (dopoledne) +1 hod. 
+(odpoledne), na odpolední hodinu bezprostředně navázat 1 hod. 
+demonstračního cvičení</td>
+<td>-</td>
+<td>07:00</td>
+<td>08:50</td>
+<td>vozím děti do školky</td>
+</tr>
+<tr><td rowspan="1">Smrčka&nbsp;Aleš,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">cvičení</td>
+<td rowspan="1">1</td>
+<td rowspan="1">360</td>
+<td rowspan="1">1</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">D105+D020x</td>
+<td rowspan="1">Demonstrační cvičení v týdnu navázat hned na 1 hodinovou přednášku dané skupiny.</td>
+<td>-</td>
+<td>13:00</td>
+<td>18:50</td>
+<td>low</td>
+<td>1BIB</td>
+<td>-</td>
+<td>07:00</td>
+<td>08:50</td>
+<td>vozím děti do školky</td>
+</tr>
+<tr><td rowspan="1">Smrčka&nbsp;Aleš,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">cvičení</td>
+<td rowspan="1">1</td>
+<td rowspan="1">360</td>
+<td rowspan="1">1</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">D105+D020x</td>
+<td rowspan="1">Demonstrační cvičení v týdnu navázat hned na 1 hodinovou přednášku dané skupiny.</td>
+<td>-</td>
+<td>13:00</td>
+<td>18:50</td>
+<td>low</td>
+<td>1BIA</td>
+<td>-</td>
+<td>07:00</td>
+<td>08:50</td>
+<td>vozím děti do školky</td>
+</tr>
+<tr>
+<td rowspan="1">I2C</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td rowspan="1">41</td>
+<td rowspan="1">60</td>
+<td rowspan="1">Matoušek&nbsp;Petr,&nbsp;Ing.,&nbsp;Ph.D.,&nbsp;M.A.</td>
+<td rowspan="1">Matoušek&nbsp;Petr,&nbsp;Ing.,&nbsp;Ph.D.,&nbsp;M.A.<br>Skokanová&nbsp;Jana,&nbsp;Mgr.</td>
+<td rowspan="1">Skokanová&nbsp;Jana,&nbsp;Mgr.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">60</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">G202 popř. E104, E105</td>
+<td rowspan="1"></td>
+<td>pondělí</td>
+<td>13:00</td>
+<td>14:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="4">MAT</td>
+<td rowspan="4">MBI, MBS, MGM, MIN, MIS, MMI, MMM, MPV, MSK</td>
+<td rowspan="4"></td>
+<td rowspan="4">304</td>
+<td rowspan="4">500</td>
+<td rowspan="4">Šlapal&nbsp;Josef,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td rowspan="4">Šlapal&nbsp;Josef,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td rowspan="4">Šlapal&nbsp;Josef,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td rowspan="4">přednáška</td>
+<td rowspan="4">1</td>
+<td rowspan="4">450</td>
+<td rowspan="4">4</td>
+<td rowspan="4">každý</td>
+<td rowspan="4"></td>
+<td rowspan="4">2x 2 hod. přednášky s cvičením týdně, min. ob 1 den (nejlépe Po+Čt, případně Út+Čt)</td>
+<td>pondělí</td>
+<td>16:00</td>
+<td>17:50</td>
+<td>low</td>
+<td></td>
+<td>-</td>
+<td>07:00</td>
+<td>15:50</td>
+<td>Vedoucí ústavu - do 16:00 nešikovné</td>
+</tr>
+<tr><td>úterý</td>
+<td>16:00</td>
+<td>17:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="3"></td>
+</tr>
+<tr><td>středa</td>
+<td>16:00</td>
+<td>17:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>16:00</td>
+<td>17:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3">MMD</td>
+<td rowspan="3"></td>
+<td rowspan="3"></td>
+<td rowspan="3">0</td>
+<td rowspan="3">10</td>
+<td rowspan="3">Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">1</td>
+<td rowspan="3">40</td>
+<td rowspan="3">3</td>
+<td rowspan="3">každý</td>
+<td rowspan="3"></td>
+<td rowspan="3"></td>
+<td colspan="5" rowspan="3"></td>
+<td>úterý</td>
+<td>07:00</td>
+<td>11:50</td>
+<td>Kolegia rektora/schze Graph@FIT</td>
+</tr>
+<tr><td>středa</td>
+<td>09:00</td>
+<td>12:50</td>
+<td>Vědecké rady FIT</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>08:00</td>
+<td>11:50</td>
+<td>Kolegia děkana</td>
+</tr>
+<tr>
+<td rowspan="3">PCS</td>
+<td rowspan="3">MPV</td>
+<td rowspan="3">MBI, MGM, MMI</td>
+<td rowspan="3">30</td>
+<td rowspan="3">64</td>
+<td rowspan="3">Fučík&nbsp;Otto,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Kořenek&nbsp;Jan,&nbsp;Ing.,&nbsp;Ph.D.<br>Martínek&nbsp;Tomáš,&nbsp;Ing.,&nbsp;Ph.D.<br>Matoušek&nbsp;Jiří,&nbsp;Ing.</td>
+<td rowspan="3">Fučík&nbsp;Otto,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">1</td>
+<td rowspan="3">64</td>
+<td rowspan="3">2</td>
+<td rowspan="3">každý</td>
+<td rowspan="3"></td>
+<td rowspan="3"></td>
+<td colspan="5" rowspan="3"></td>
+<td>úterý</td>
+<td>13:00</td>
+<td>16:50</td>
+<td>senát</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>07:00</td>
+<td>13:50</td>
+<td>kolegium děkana</td>
+</tr>
+<tr><td>pátek</td>
+<td>07:00</td>
+<td>20:50</td>
+<td>Nedostatečná účast na přednáškách - studenti pak mají problémy</td>
+</tr>
+<tr>
+<td rowspan="9">PDB</td>
+<td rowspan="9">MBI, MGM, MIS</td>
+<td rowspan="9">MIN, MMI, MSK</td>
+<td rowspan="9">137</td>
+<td rowspan="9">200</td>
+<td rowspan="9">Kolář&nbsp;Dušan,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="9">Kolář&nbsp;Dušan,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.<br>Zendulka&nbsp;Jaroslav,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="8">Kolář&nbsp;Dušan,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="8">přednáška</td>
+<td rowspan="8">1</td>
+<td rowspan="8">190</td>
+<td rowspan="8">2</td>
+<td rowspan="8">každý</td>
+<td rowspan="8"></td>
+<td rowspan="8"></td>
+<td>pondělí</td>
+<td>13:00</td>
+<td>14:50</td>
+<td>low</td>
+<td>Ideální termín, případně by mohl začínat o hodinu dříve i hodinu později</td>
+<td>pondělí</td>
+<td>07:00</td>
+<td>10:50</td>
+<td>Často mimo FIT</td>
+</tr>
+<tr><td colspan="5" rowspan="7"></td>
+<td>pondělí</td>
+<td>16:00</td>
+<td>18:50</td>
+<td>Často mimo FIT</td>
+</tr>
+<tr><td>úterý</td>
+<td>07:00</td>
+<td>09:50</td>
+<td>Často mimo FIT</td>
+</tr>
+<tr><td>úterý</td>
+<td>13:00</td>
+<td>17:50</td>
+<td>Senát FIT, zasedání RNMSP</td>
+</tr>
+<tr><td>středa</td>
+<td>07:00</td>
+<td>10:50</td>
+<td>Často mimo FIT</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>08:00</td>
+<td>11:50</td>
+<td>Kolegium děkana</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>13:00</td>
+<td>16:50</td>
+<td>Jednání EK AS FIT</td>
+</tr>
+<tr><td>pátek</td>
+<td>07:00</td>
+<td>09:50</td>
+<td>Často mimo FIT</td>
+</tr>
+<tr><td rowspan="1">Rychlý&nbsp;Marek,&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="1">poč.lab.</td>
+<td rowspan="1">1</td>
+<td rowspan="1">40</td>
+<td rowspan="1">8</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">N103+N104, N104+N105, N203+N204, N204+N205 (vždy spojené s odstraněnou stěnou)</td>
+<td rowspan="1"></td>
+<td colspan="5" rowspan="1"></td>
+<td>-</td>
+<td>07:00</td>
+<td>09:50</td>
+<td>školka</td>
+</tr>
+<tr>
+<td rowspan="3">PGD</td>
+<td rowspan="3"></td>
+<td rowspan="3"></td>
+<td rowspan="3">0</td>
+<td rowspan="3">10</td>
+<td rowspan="3">Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">1</td>
+<td rowspan="3">40</td>
+<td rowspan="3">2</td>
+<td rowspan="3">každý</td>
+<td rowspan="3"></td>
+<td rowspan="3"></td>
+<td colspan="5" rowspan="3"></td>
+<td>úterý</td>
+<td>07:00</td>
+<td>11:50</td>
+<td>Kolegia rektora/schze Graph@FIT</td>
+</tr>
+<tr><td>středa</td>
+<td>09:00</td>
+<td>12:50</td>
+<td>Vědecké rady FIT</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>08:00</td>
+<td>11:50</td>
+<td>Kolegia děkana</td>
+</tr>
+<tr>
+<td rowspan="3">PGP</td>
+<td rowspan="3"></td>
+<td rowspan="3">MGM</td>
+<td rowspan="3">12</td>
+<td rowspan="3">64</td>
+<td rowspan="3">Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Beran&nbsp;Vítězslav,&nbsp;Ing.,&nbsp;Ph.D.<br>Čadík&nbsp;Martin,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.<br>Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">1</td>
+<td rowspan="3">64</td>
+<td rowspan="3">2</td>
+<td rowspan="3">každý</td>
+<td rowspan="3"></td>
+<td rowspan="3">Martin Čadík: pokud bych si mohl vybrat, tak ani PGP ani POV bych nechtěl mít v pátek nebo v pondělí</td>
+<td colspan="5" rowspan="3"></td>
+<td>úterý</td>
+<td>07:00</td>
+<td>11:50</td>
+<td>Kolegia rektora/schze Graph@FIT</td>
+</tr>
+<tr><td>středa</td>
+<td>09:00</td>
+<td>12:50</td>
+<td>Vědecké rady FIT</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>08:00</td>
+<td>11:50</td>
+<td>Kolegia děkana</td>
+</tr>
+<tr>
+<td rowspan="2">PGR</td>
+<td rowspan="2">MGM</td>
+<td rowspan="2">MPV</td>
+<td rowspan="2">70</td>
+<td rowspan="2">154</td>
+<td rowspan="2">Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">1</td>
+<td rowspan="2">154</td>
+<td rowspan="2">3</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+<td colspan="5" rowspan="2"></td>
+<td>-</td>
+<td>07:00</td>
+<td>07:50</td>
+<td>Vozím děti do školy</td>
+</tr>
+<tr><td>úterý</td>
+<td>07:00</td>
+<td>11:50</td>
+<td>meetingy</td>
+</tr>
+<tr>
+<td rowspan="2">PKS</td>
+<td rowspan="2">MSK</td>
+<td rowspan="2">MBS, MIS, MMI, MPV</td>
+<td rowspan="2">23</td>
+<td rowspan="2">90</td>
+<td rowspan="2">Švéda&nbsp;Miroslav,&nbsp;prof.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="2">Ščuglík&nbsp;František,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">Ščuglík&nbsp;František,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">1</td>
+<td rowspan="2">90</td>
+<td rowspan="2">3</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+<td>úterý</td>
+<td>17:00</td>
+<td>19:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="2"></td>
+</tr>
+<tr><td>středa</td>
+<td>17:00</td>
+<td>19:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="3">POV</td>
+<td rowspan="3"></td>
+<td rowspan="3">MGM, MIN, MPV</td>
+<td rowspan="3">41</td>
+<td rowspan="3">80</td>
+<td rowspan="3">Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Beran&nbsp;Vítězslav,&nbsp;Ing.,&nbsp;Ph.D.<br>Čadík&nbsp;Martin,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.<br>Hradiš&nbsp;Michal,&nbsp;Ing.,&nbsp;Ph.D.<br>Španěl&nbsp;Michal,&nbsp;Ing.,&nbsp;Ph.D.<br>Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">1</td>
+<td rowspan="3">80</td>
+<td rowspan="3">2</td>
+<td rowspan="3">každý</td>
+<td rowspan="3"></td>
+<td rowspan="3">Martin Čadík: pokud bych si mohl vybrat, tak ani PGP ani POV bych nechtěl mít v pátek nebo v pondělí</td>
+<td colspan="5" rowspan="3"></td>
+<td>úterý</td>
+<td>07:00</td>
+<td>11:50</td>
+<td>Kolegia rektora/schze Graph@FIT</td>
+</tr>
+<tr><td>středa</td>
+<td>09:00</td>
+<td>12:50</td>
+<td>Vědecké rady FIT</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>08:00</td>
+<td>11:50</td>
+<td>Kolegia děkana</td>
+</tr>
+<tr>
+<td rowspan="1">PRM</td>
+<td rowspan="1"></td>
+<td rowspan="1">MBI, MBS, MGM, MIN, MIS, MMI, MMM, MPV, MSK</td>
+<td rowspan="1">50</td>
+<td rowspan="1">50</td>
+<td rowspan="1">Klapetek&nbsp;Milan,&nbsp;Mgr.</td>
+<td rowspan="1"></td>
+<td rowspan="1">Klapetek&nbsp;Milan,&nbsp;Mgr.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">80</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">G202</td>
+<td rowspan="1">Blok společně s FIT a RET</td>
+<td>čtvrtek</td>
+<td>13:00</td>
+<td>18:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="1">RET</td>
+<td rowspan="1"></td>
+<td rowspan="1">MBI, MBS, MGM, MIN, MIS, MMI, MMM, MPV, MSK</td>
+<td rowspan="1">50</td>
+<td rowspan="1">50</td>
+<td rowspan="1">Klapetek&nbsp;Milan,&nbsp;Mgr.</td>
+<td rowspan="1"></td>
+<td rowspan="1">Klapetek&nbsp;Milan,&nbsp;Mgr.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">80</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">G202</td>
+<td rowspan="1">Blok společně s FIT a PRM</td>
+<td>čtvrtek</td>
+<td>13:00</td>
+<td>18:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="1">ROB</td>
+<td rowspan="1"></td>
+<td rowspan="1">MIN</td>
+<td rowspan="1">28</td>
+<td rowspan="1">80</td>
+<td rowspan="1">Orság&nbsp;Filip,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Orság&nbsp;Filip,&nbsp;Ing.,&nbsp;Ph.D.<br>Rozman&nbsp;Jaroslav,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Rozman&nbsp;Jaroslav,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">50</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">E104, E105</td>
+<td rowspan="1"></td>
+<td>čtvrtek</td>
+<td>10:00</td>
+<td>11:50</td>
+<td>low</td>
+<td>pripadne jiny den v tuto dobu</td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="4">ROS</td>
+<td rowspan="4"></td>
+<td rowspan="4">MMI, MSK</td>
+<td rowspan="4">9</td>
+<td rowspan="4">64</td>
+<td rowspan="4">Strnadel&nbsp;Josef,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="4">Strnadel&nbsp;Josef,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="4">Strnadel&nbsp;Josef,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="4">přednáška</td>
+<td rowspan="4">1</td>
+<td rowspan="4">32</td>
+<td rowspan="4">2</td>
+<td rowspan="4">každý</td>
+<td rowspan="4">A112/3, E104/5</td>
+<td rowspan="4">rozvrhovat pro předn. sk. 1/2MIT; prosím o bezkoliznost s rozvrhem IMP v 3BIT</td>
+<td>-</td>
+<td>08:00</td>
+<td>14:50</td>
+<td>low</td>
+<td>výjimky viz "Nemohu učit"</td>
+<td>-</td>
+<td>07:00</td>
+<td>07:50</td>
+<td>doprava syna do školy</td>
+</tr>
+<tr><td colspan="5" rowspan="3"></td>
+<td>-</td>
+<td>07:00</td>
+<td>20:50</td>
+<td>prosím o bezkoliznost s rozvrhem IMP</td>
+</tr>
+<tr><td>-</td>
+<td>15:00</td>
+<td>15:50</td>
+<td>doprava syna ze školy</td>
+</tr>
+<tr><td>pátek</td>
+<td>13:00</td>
+<td>14:50</td>
+<td>seminář ÚPSY</td>
+</tr>
+<tr>
+<td rowspan="3">SEN</td>
+<td rowspan="3"></td>
+<td rowspan="3">MBS, MIN, MPV, MSK</td>
+<td rowspan="3">60</td>
+<td rowspan="3">80</td>
+<td rowspan="3">Drahanský&nbsp;Martin,&nbsp;doc.&nbsp;Ing.,&nbsp;Dipl.-Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">Drahanský&nbsp;Martin,&nbsp;doc.&nbsp;Ing.,&nbsp;Dipl.-Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">Drahanský&nbsp;Martin,&nbsp;doc.&nbsp;Ing.,&nbsp;Dipl.-Ing.,&nbsp;Ph.D.</td>
+<td rowspan="3">přednáška</td>
+<td rowspan="3">1</td>
+<td rowspan="3">80</td>
+<td rowspan="3">2</td>
+<td rowspan="3">každý</td>
+<td rowspan="3"></td>
+<td rowspan="3">Ideální jsou úterky. Pokud bych si mohl vymýšlet, tak nejlepší je dát ráno v úterý jeden předmět a po obědě druhý.</td>
+<td>-</td>
+<td>07:00</td>
+<td>10:50</td>
+<td>low</td>
+<td>Preferuji rána (klidně hned od 7 hodin)</td>
+<td>úterý</td>
+<td>16:00</td>
+<td>20:50</td>
+<td></td>
+</tr>
+<tr><td>úterý</td>
+<td>07:00</td>
+<td>10:50</td>
+<td>low</td>
+<td></td>
+<td>čtvrtek</td>
+<td>09:00</td>
+<td>12:50</td>
+<td>Kolegium děkana</td>
+</tr>
+<tr><td>úterý</td>
+<td>12:00</td>
+<td>15:50</td>
+<td>low</td>
+<td></td>
+<td>čtvrtek</td>
+<td>16:00</td>
+<td>20:50</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2">SFC</td>
+<td rowspan="2">MBI, MIN</td>
+<td rowspan="2">MMM, MPV</td>
+<td rowspan="2">65</td>
+<td rowspan="2">150</td>
+<td rowspan="2">Zbořil&nbsp;František&nbsp;V.,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="2">Zbořil&nbsp;František&nbsp;V.,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="2">Zbořil&nbsp;František&nbsp;V.,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">1</td>
+<td rowspan="2">100</td>
+<td rowspan="2">2</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+<td>pondělí</td>
+<td>10:00</td>
+<td>12:50</td>
+<td>low</td>
+<td></td>
+<td>čtvrtek</td>
+<td>07:00</td>
+<td>16:50</td>
+<td>KD, semináře ÚITS, pracovní schůzky skupiny ISY</td>
+</tr>
+<tr><td>úterý</td>
+<td>08:00</td>
+<td>14:50</td>
+<td>low</td>
+<td>Nejlépe 10:00-11:50</td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="1">SIN</td>
+<td rowspan="1">MIN, MSK</td>
+<td rowspan="1">MBI, MGM, MIS, MPV, MSK</td>
+<td rowspan="1">95</td>
+<td rowspan="1">154</td>
+<td rowspan="1">Janoušek&nbsp;Vladimír,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Janoušek&nbsp;Vladimír,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Janoušek&nbsp;Vladimír,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">120</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1"></td>
+<td rowspan="1">Uvítám stejné zařazení jako v minulých letech, tj. 
+přednáška a hned poté democvičení. Ideálně v podvečer, na konci 
+výukového dne, po/ut.</td>
+<td colspan="5" rowspan="1"></td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="4">SMT</td>
+<td rowspan="4"></td>
+<td rowspan="4"></td>
+<td rowspan="4">138</td>
+<td rowspan="4">300</td>
+<td rowspan="4">Vojnar&nbsp;Tomáš,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="4"></td>
+<td rowspan="4">Rogalewicz&nbsp;Adam,&nbsp;Mgr.,&nbsp;Ph.D.</td>
+<td rowspan="4">cvičení</td>
+<td rowspan="4">1</td>
+<td rowspan="4">300</td>
+<td rowspan="4">3</td>
+<td rowspan="4">každý</td>
+<td rowspan="4">D105</td>
+<td rowspan="4">Synchronizace s TIN/MAT/STI - prosim naplanovat na jiny den nez tyto predmety. Nejlépe až po MAT.</td>
+<td>pondělí</td>
+<td>09:00</td>
+<td>19:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="4"></td>
+</tr>
+<tr><td>úterý</td>
+<td>09:00</td>
+<td>19:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr><td>středa</td>
+<td>09:00</td>
+<td>19:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>09:00</td>
+<td>19:50</td>
+<td>low</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="1">SRI</td>
+<td rowspan="1">MMI</td>
+<td rowspan="1">MIS</td>
+<td rowspan="1">28</td>
+<td rowspan="1">64</td>
+<td rowspan="1">Květoňová&nbsp;Šárka,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Květoňová&nbsp;Šárka,&nbsp;Ing.,&nbsp;Ph.D.<br>Rychlý&nbsp;Marek,&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td rowspan="1">Květoňová&nbsp;Šárka,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">50</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td>středa</td>
+<td>10:00</td>
+<td>11:50</td>
+<td>low</td>
+<td></td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="1">STI</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td rowspan="1">174</td>
+<td rowspan="1">300</td>
+<td rowspan="1">Vojnar&nbsp;Tomáš,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1"></td>
+<td rowspan="1">Vojnar&nbsp;Tomáš,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">cvičení</td>
+<td rowspan="1">1</td>
+<td rowspan="1">300</td>
+<td rowspan="1">3</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">D105</td>
+<td rowspan="1">Prosím v týdnu až po konání TIN, prosím ne ve stejný den jako FAV.</td>
+<td>středa</td>
+<td>14:00</td>
+<td>16:50</td>
+<td>low</td>
+<td>Pokud možno ponechat mezeru po konání -- některé semináře bývají delší.</td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="2">TAM</td>
+<td rowspan="2"></td>
+<td rowspan="2"></td>
+<td rowspan="2">80</td>
+<td rowspan="2">80</td>
+<td rowspan="2">Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="2">přednáška</td>
+<td rowspan="2">1</td>
+<td rowspan="2">90</td>
+<td rowspan="2">2</td>
+<td rowspan="2">každý</td>
+<td rowspan="2"></td>
+<td rowspan="2">Po přednášce v posluchárně 1 volnou hodinu pro případné přetažení</td>
+<td colspan="5" rowspan="2"></td>
+<td>-</td>
+<td>07:00</td>
+<td>07:50</td>
+<td>Vozím děti do školy</td>
+</tr>
+<tr><td>úterý</td>
+<td>07:00</td>
+<td>11:50</td>
+<td>meetingy</td>
+</tr>
+<tr>
+<td rowspan="1">TIN</td>
+<td rowspan="1">MBI, MBS, MGM, MIN, MIS, MMI, MMM, MPV, MSK</td>
+<td rowspan="1"></td>
+<td rowspan="1">337</td>
+<td rowspan="1">550</td>
+<td rowspan="1">Češka&nbsp;Milan,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td rowspan="1">Češka&nbsp;Milan,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td rowspan="1">Češka&nbsp;Milan,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">550</td>
+<td rowspan="1">3</td>
+<td rowspan="1">každý</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td>pondělí</td>
+<td>13:00</td>
+<td>18:50</td>
+<td>low</td>
+<td>Byl bych pouze rád, aby přednáška TIN zůstala v pondělním odpoledním rozvrhu, případně i jiný den, ale odpoledne.</td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr>
+<td rowspan="1">VIN</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td rowspan="1">22</td>
+<td rowspan="1">150</td>
+<td rowspan="1">Čadík&nbsp;Martin,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">Staudek&nbsp;Tomáš,&nbsp;Mgr.,&nbsp;Ph.D.</td>
+<td rowspan="1">Staudek&nbsp;Tomáš,&nbsp;Mgr.,&nbsp;Ph.D.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">150</td>
+<td rowspan="1">2</td>
+<td rowspan="1">každý</td>
+<td rowspan="1">menší, s ohledem na počet přihlášených studentů</td>
+<td rowspan="1"></td>
+<td colspan="5" rowspan="1"></td>
+<td>pátek</td>
+<td>07:00</td>
+<td>20:50</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="5">ZZN</td>
+<td rowspan="5">MBI, MIN</td>
+<td rowspan="5">MBS, MIS, MPV, MSK</td>
+<td rowspan="5">68</td>
+<td rowspan="5">154</td>
+<td rowspan="5">Zendulka&nbsp;Jaroslav,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="5">Bartík&nbsp;Vladimír,&nbsp;Ing.,&nbsp;Ph.D.<br>Burgetová&nbsp;Ivana,&nbsp;Ing.,&nbsp;Ph.D.<br>Zendulka&nbsp;Jaroslav,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="1">Burgetová&nbsp;Ivana,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td rowspan="1">přednáška</td>
+<td rowspan="1">1</td>
+<td rowspan="1">154</td>
+<td rowspan="1">3</td>
+<td rowspan="1">každý</td>
+<td rowspan="1"></td>
+<td rowspan="1"></td>
+<td>pondělí</td>
+<td>10:00</td>
+<td>12:50</td>
+<td>low</td>
+<td>Pokud by rozvrh pro IAL, IFJ a ZZN mohl zůstat stejný jako loni, bylo by to asi ideální.</td>
+<td colspan="4" rowspan="1"></td>
+</tr>
+<tr><td rowspan="5">Zendulka&nbsp;Jaroslav,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td rowspan="5">přednáška</td>
+<td rowspan="5">1</td>
+<td rowspan="5">100</td>
+<td rowspan="5">3</td>
+<td rowspan="5">každý</td>
+<td rowspan="5"></td>
+<td rowspan="5">ideálně jako vloni, tj. Po 10-13</td>
+<td>pondělí</td>
+<td>10:00</td>
+<td>12:50</td>
+<td>low</td>
+<td>jako vloni</td>
+<td>pondělí</td>
+<td>07:00</td>
+<td>09:50</td>
+<td></td>
+</tr>
+<tr><td colspan="5" rowspan="4"></td>
+<td>úterý</td>
+<td>07:00</td>
+<td>09:50</td>
+<td></td>
+</tr>
+<tr><td>středa</td>
+<td>07:00</td>
+<td>14:50</td>
+<td>věd. rady</td>
+</tr>
+<tr><td>čtvrtek</td>
+<td>07:00</td>
+<td>12:50</td>
+<td>věd. rady</td>
+</tr>
+<tr><td>pátek</td>
+<td>07:00</td>
+<td>10:50</td>
+<td>angličtina</td>
+</tr>
+<tr><td colspan="23" height="5" bgcolor="#aaaaaa"></td></tr>
+<tr>
+<td>AIT</td>
+<td></td>
+<td>BIT</td>
+<td>57</td>
+<td>60</td>
+<td>Šedrlová&nbsp;Magdalena,&nbsp;Bc.</td>
+<td></td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>BAN3</td>
+<td></td>
+<td>BIT</td>
+<td>46</td>
+<td>50</td>
+<td>Walek&nbsp;Agata,&nbsp;Mgr.</td>
+<td></td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>BAN4</td>
+<td></td>
+<td>BIT</td>
+<td>199</td>
+<td>200</td>
+<td>Sedláček&nbsp;Pavel,&nbsp;Mgr.</td>
+<td></td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>DMA1</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>30</td>
+<td>Baštinec&nbsp;Jaromír,&nbsp;doc.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td>Baštinec&nbsp;Jaromír,&nbsp;doc.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>FCE</td>
+<td></td>
+<td>MBI, MBS, MGM, MIN, MIS, MMI, MMM, MPV, MSK</td>
+<td>50</td>
+<td>50</td>
+<td>Růžička&nbsp;Richard,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.,&nbsp;MBA</td>
+<td></td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>GAL</td>
+<td>MMM, MSK</td>
+<td>MSK</td>
+<td>44</td>
+<td>80</td>
+<td>Meduna&nbsp;Alexander,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td>Křivka&nbsp;Zbyněk,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>HPO</td>
+<td></td>
+<td>MBI, MBS, MGM, MIN, MIS, MMI, MMM, MPV, MSK</td>
+<td>30</td>
+<td>30</td>
+<td>Růžička&nbsp;Richard,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.,&nbsp;MBA</td>
+<td></td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IALe</td>
+<td>BIT</td>
+<td></td>
+<td>0</td>
+<td>40</td>
+<td>Honzík&nbsp;Jan&nbsp;M.,&nbsp;prof.&nbsp;Ing.,&nbsp;CSc.</td>
+<td>Burgetová&nbsp;Ivana,&nbsp;Ing.,&nbsp;Ph.D.<br>Honzík&nbsp;Jan&nbsp;M.,&nbsp;prof.&nbsp;Ing.,&nbsp;CSc.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IELe</td>
+<td>BIT</td>
+<td></td>
+<td>0</td>
+<td>40</td>
+<td>Kunovský&nbsp;Jiří,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td>Kunovský&nbsp;Jiří,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IFJe</td>
+<td>BIT</td>
+<td></td>
+<td>0</td>
+<td>40</td>
+<td>Meduna&nbsp;Alexander,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td>Soukup&nbsp;Ondřej,&nbsp;Ing.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IFS</td>
+<td></td>
+<td></td>
+<td>14</td>
+<td>200</td>
+<td>Bartlová&nbsp;Milada,&nbsp;doc.&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td></td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IIPD</td>
+<td></td>
+<td></td>
+<td>3</td>
+<td>40</td>
+<td>Jílek&nbsp;Martin,&nbsp;Ing.</td>
+<td>Jílek&nbsp;Martin,&nbsp;Ing.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IKPT</td>
+<td></td>
+<td></td>
+<td>29</td>
+<td>30</td>
+<td>Jílek&nbsp;Martin,&nbsp;Ing.</td>
+<td>Jílek&nbsp;Martin,&nbsp;Ing.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IMAE</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>30</td>
+<td>Zinecker&nbsp;Marek,&nbsp;Doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td>Kučerová&nbsp;Vladimíra,&nbsp;Ing.,&nbsp;Ph.D.<br>Zinecker&nbsp;Marek,&nbsp;Doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IMF</td>
+<td></td>
+<td></td>
+<td>28</td>
+<td>30</td>
+<td>Hliněná&nbsp;Dana,&nbsp;doc.&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td></td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>INCe</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>40</td>
+<td>Eysselt&nbsp;Miloš,&nbsp;Ing.,&nbsp;CSc.</td>
+<td>Eysselt&nbsp;Miloš,&nbsp;Ing.,&nbsp;CSc.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IPA</td>
+<td></td>
+<td></td>
+<td>31</td>
+<td>90</td>
+<td>Orság&nbsp;Filip,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td>Orság&nbsp;Filip,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IPKe</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>40</td>
+<td>Švéda&nbsp;Miroslav,&nbsp;prof.&nbsp;Ing.,&nbsp;CSc.</td>
+<td>Trchalík&nbsp;Roman,&nbsp;Mgr.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IPMA</td>
+<td></td>
+<td></td>
+<td>19</td>
+<td>40</td>
+<td>Putnová&nbsp;Anna,&nbsp;doc.&nbsp;RNDr.,&nbsp;Ph.D.,&nbsp;MBA</td>
+<td>Veselý&nbsp;Josef,&nbsp;Ing.,&nbsp;CSc.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IPSO</td>
+<td></td>
+<td></td>
+<td>4</td>
+<td>30</td>
+<td>Jílek&nbsp;Martin,&nbsp;Ing.</td>
+<td>Jílek&nbsp;Martin,&nbsp;Ing.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>ISA</td>
+<td>BIT</td>
+<td></td>
+<td>445</td>
+<td>550</td>
+<td>Švéda&nbsp;Miroslav,&nbsp;prof.&nbsp;Ing.,&nbsp;CSc.</td>
+<td>Matoušek&nbsp;Petr,&nbsp;Ing.,&nbsp;Ph.D.,&nbsp;M.A.<br>Ryšavý&nbsp;Ondřej,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>ISM</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>300</td>
+<td>Krupková&nbsp;Vlasta,&nbsp;RNDr.,&nbsp;CSc.</td>
+<td></td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>ISSe</td>
+<td>BIT</td>
+<td></td>
+<td>0</td>
+<td>40</td>
+<td>Černocký&nbsp;Jan,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.</td>
+<td>Černocký&nbsp;Jan,&nbsp;doc.&nbsp;Dr.&nbsp;Ing.<br>Grézl&nbsp;František,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>ITUe</td>
+<td>BIT</td>
+<td></td>
+<td>0</td>
+<td>40</td>
+<td>Beran&nbsp;Vítězslav,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td>Beran&nbsp;Vítězslav,&nbsp;Ing.,&nbsp;Ph.D.<br>Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.<br>Klicnar&nbsp;Lukáš,&nbsp;Ing.<br>Mlích&nbsp;Jozef,&nbsp;Ing.<br>Zemčík&nbsp;Pavel,&nbsp;prof.&nbsp;Dr.&nbsp;Ing.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>ITWe</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>40</td>
+<td>Burget&nbsp;Radek,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td>Burget&nbsp;Radek,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IVG</td>
+<td></td>
+<td></td>
+<td>18</td>
+<td>650</td>
+<td>Hrabalová&nbsp;Eliška,&nbsp;Bc.</td>
+<td></td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IW1</td>
+<td></td>
+<td></td>
+<td>120</td>
+<td>120</td>
+<td>Honzík&nbsp;Jan&nbsp;M.,&nbsp;prof.&nbsp;Ing.,&nbsp;CSc.</td>
+<td>Fiedor&nbsp;Jan,&nbsp;Ing.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IZEP</td>
+<td></td>
+<td></td>
+<td>15</td>
+<td>30</td>
+<td>Meluzín&nbsp;Tomáš,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td>Heralecký&nbsp;Tomáš,&nbsp;Ing.&nbsp;et&nbsp;Ing.,&nbsp;Ph.D.<br>Meluzín&nbsp;Tomáš,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>IZUe</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>40</td>
+<td>Zbořil&nbsp;František,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td>Zbořil&nbsp;František,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>PBI</td>
+<td>MBI</td>
+<td></td>
+<td>10</td>
+<td>64</td>
+<td>Lexa&nbsp;Matej,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td>Lexa&nbsp;Matej,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>PDI</td>
+<td>MSK</td>
+<td>MGM, MIS, MPV</td>
+<td>35</td>
+<td>80</td>
+<td>Ryšavý&nbsp;Ondřej,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td>Pluskal&nbsp;Jan,&nbsp;Ing.<br>Ráb&nbsp;Jaroslav,&nbsp;Ing.<br>Rychlý&nbsp;Marek,&nbsp;RNDr.,&nbsp;Ph.D.<br>Ryšavý&nbsp;Ondřej,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>PDIe</td>
+<td>MSK</td>
+<td>MGM, MIS, MPV</td>
+<td>0</td>
+<td>40</td>
+<td>Ryšavý&nbsp;Ondřej,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td>Ráb&nbsp;Jaroslav,&nbsp;Ing.<br>Ryšavý&nbsp;Ondřej,&nbsp;doc.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>PGRe</td>
+<td>MGM</td>
+<td>MPV</td>
+<td>0</td>
+<td>40</td>
+<td>Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td>Herout&nbsp;Adam,&nbsp;prof.&nbsp;Ing.,&nbsp;Ph.D.<br>Klepárník&nbsp;Petr,&nbsp;Ing.<br>Kobrtek&nbsp;Jozef,&nbsp;Ing.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>POM</td>
+<td></td>
+<td>MMI</td>
+<td>8</td>
+<td>30</td>
+<td>Putnová&nbsp;Anna,&nbsp;doc.&nbsp;RNDr.,&nbsp;Ph.D.,&nbsp;MBA</td>
+<td>Veselý&nbsp;Josef,&nbsp;Ing.,&nbsp;CSc.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>SMA</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>30</td>
+<td>Chalupský&nbsp;Vladimír,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.,&nbsp;MBA</td>
+<td>Chalupský&nbsp;Vladimír,&nbsp;doc.&nbsp;Ing.,&nbsp;CSc.,&nbsp;MBA</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>THE</td>
+<td>MBI, MMM</td>
+<td>MIN, MSK</td>
+<td>42</td>
+<td>150</td>
+<td>Hrubý&nbsp;Martin,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td>Hrubý&nbsp;Martin,&nbsp;Ing.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>TKD</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>30</td>
+<td>Šlapal&nbsp;Josef,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td></td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>VYPe</td>
+<td>MMM</td>
+<td>MIS</td>
+<td>38</td>
+<td>64</td>
+<td>Meduna&nbsp;Alexander,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td>Křivka&nbsp;Zbyněk,&nbsp;Ing.,&nbsp;Ph.D.<br>Meduna&nbsp;Alexander,&nbsp;prof.&nbsp;RNDr.,&nbsp;CSc.</td>
+<td colspan="16"></td>
+</tr>
+<tr>
+<td>ZPJe</td>
+<td></td>
+<td>MBI</td>
+<td>0</td>
+<td>40</td>
+<td>Smrž&nbsp;Pavel,&nbsp;doc.&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td>Smrž&nbsp;Pavel,&nbsp;doc.&nbsp;RNDr.,&nbsp;Ph.D.</td>
+<td colspan="16"></td>
+</tr>
+</tbody></table>
+</td></tr></tbody></table><div class="noprint">
+<address class="noprint">&#169; Fakulta informačních technologií VUT v Brně, Božetěchova 2, 612 66 Brno<br>Připomínky zasílejte na adresu <a href="mailto:lampa@fit.vutbr.cz">lampa@fit.vutbr.cz</a></address></div>
+
+</body></html>

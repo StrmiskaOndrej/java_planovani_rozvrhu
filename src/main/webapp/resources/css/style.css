@@ -1,0 +1,28 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+#index {
+    width: 500px;
+    height: 35px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#index button {
+    min-width: 150px;
+}
+
+.ui-menu .ui-menuitem {
+    margin-left: 10px;
+}
